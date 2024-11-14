@@ -1,8 +1,9 @@
 import LoginPage from "./login_page/loginpage";
 import Dashboard
- from "./login_page/dashboard";
+    from "./login_page/dashboard";
 import { useSelector } from 'react-redux';
 import { Route, Routes } from 'react-router-dom';
+import AddCarPage from "./home/AddCarPage";
 export default function App() {
     const isLoggedIn = useSelector((state) => state.userAccount.isLoggedIn);
 
@@ -11,6 +12,7 @@ export default function App() {
         routes = (
             <Routes>
                 <Route path="/" element={<Dashboard />} />
+                <Route path="/car" element={<AddCarPage />} />
             </Routes>
         )
     }
@@ -18,6 +20,7 @@ export default function App() {
         routes = (
             <Routes>
                 <Route path="/" element={<LoginPage />} />
+                <Route path="/car" element={<AddCarPage />} />
             </Routes>
         )
     }

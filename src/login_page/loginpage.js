@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { useDispatch } from "react-redux";
 import { login } from "../store/accountSlice";
-import {Title, Heading, Wrapper, Input, Section, Button} from '../styled_components';
+import { Title, Heading, Wrapper, Input, TextArea, Section, Button } from '../styled_components';
 
 const LoginPage = props => {
   const dispatch = useDispatch();
